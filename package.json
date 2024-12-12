@@ -1,0 +1,29 @@
+{
+  "name": "structs-sign-proxy",
+  "version": "0.1.0",
+  "description": "A small Structs utility for signing proxy messages",
+  "main": "bin/structs-sign-proxy.js",
+  "bin": {
+    "structs-sign-proxy": "bin/structs-sign-proxy.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/playstructs/structs-sign-proxy.git"
+  },
+  "keywords": [
+    "structs"
+  ],
+  "author": "Slow Ninja Inc.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/playstructs/structs-sign-proxy/issues"
+  },
+  "homepage": "https://github.com/playstructs/structs-sign-proxy#readme",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "yargs": "^17.7.2"
+  }
+}
