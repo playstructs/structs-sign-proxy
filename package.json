@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A small Structs utility for signing proxy messages",
   "main": "bin/structs-sign-proxy.js",
+  "type": "module",
   "bin": {
     "structs-sign-proxy": "bin/structs-sign-proxy.js"
   },
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/playstructs/structs-sign-proxy#readme",
   "dependencies": {
+    "@cosmjs/proto-signing": "^0.32.4",
     "commander": "^12.1.0",
     "yargs": "^17.7.2"
   }

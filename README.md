@@ -7,7 +7,23 @@ In the distant future the species of the galaxy are embroiled in a race for Alph
 
 # How to Use this...
 
-More to come...
+## Address Register Message Signature
+
+Used for generating the signature of an address that needs to be associated with an active player account.
+
+```bash
+./bin/structs-sign-proxy.js guild-join <guild_id> <player_join_nonce> "<mnemonic>"
+```
+
+
+## Guild Join Message Signature 
+
+Used for generating the signature of an address that would like a guild to produce a transaction on their behalf.
+
+```bash
+./bin/structs-sign-proxy.js guild-join <guild_id> <player_join_nonce> "<mnemonic>"
+```
+
 
 # Learn more
 
