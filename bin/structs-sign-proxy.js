@@ -99,7 +99,8 @@ export class ProxySignature {
                 "address": this.address,
                 "nonce": this.nonce,
                 "pubkey": this.getHexPubKey(),
-                "signature": this.getHexSignature()
+                "signature": this.getHexSignature(),
+                "message": this.getMessage()
             }
         } else if (this.signatureType == 'guild-login') {
             this.output = {
@@ -107,7 +108,8 @@ export class ProxySignature {
                 "address": this.address,
                 "now_in_unix": this.now_in_unix,
                 "pubkey": this.getHexPubKey(),
-                "signature": this.getHexSignature()
+                "signature": this.getHexSignature(),
+                "message": this.getMessage()
             }
         } else if (this.signatureType == 'address-register') {
             // PLAYER%sADDRESS%s
@@ -115,7 +117,8 @@ export class ProxySignature {
                 "player_id": this.playerId,
                 "address": this.address,
                 "pubkey": this.getHexPubKey(),
-                "signature": this.getHexSignature()
+                "signature": this.getHexSignature(),
+                "message": this.getMessage()
             }
         }
         return JSON.stringify(this.output)

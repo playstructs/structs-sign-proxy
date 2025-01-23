@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="745121c6-3347-4a98-95ef-1eb3c40815ea" name="Changes" comment="I think it works but testing might be helpful">
+    <list default="true" id="745121c6-3347-4a98-95ef-1eb3c40815ea" name="Changes" comment="added guild-login message signing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/structs-sign-proxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/structs-sign-proxy.js" afterDir="false" />
     </list>
@@ -57,7 +57,7 @@
       <workItem from="1735572420727" duration="598000" />
       <workItem from="1735580576443" duration="1513000" />
       <workItem from="1736800305108" duration="34000" />
-      <workItem from="1737647148779" duration="1856000" />
+      <workItem from="1737647148779" duration="2665000" />
     </task>
     <task id="LOCAL-00001" summary="Updating readme">
       <option name="closed" value="true" />
@@ -75,7 +75,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734029938765</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added guild-login message signing">
+      <option name="closed" value="true" />
+      <created>1737660202320</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737660202320</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +92,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updating readme" />
     <MESSAGE value="I think it works but testing might be helpful" />
-    <option name="LAST_COMMIT_MESSAGE" value="I think it works but testing might be helpful" />
+    <MESSAGE value="added guild-login message signing" />
+    <option name="LAST_COMMIT_MESSAGE" value="added guild-login message signing" />
   </component>
 </project>
