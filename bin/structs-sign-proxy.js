@@ -17,6 +17,7 @@ export class ProxySignature {
         this.guildId = '';
         this.playerId = '';
         this.nonce = '';
+        this.now_in_unix = '';
         this.message = '';
         this.digest;
         this.address = '';
@@ -63,8 +64,9 @@ export class ProxySignature {
     getMessage(){
         if (this.signatureType == 'guild-join') {
             this.message = 'GUILD' + this.guildId + 'ADDRESS' + this.address + 'NONCE' + this.nonce
-        } else {
-            // PLAYER%sADDRESS%s
+        else if (this.signatureType == 'guild-login') {
+            this.message = 'LOGIN_GUILD' + this.guildId + 'ADDRESS' + this.address + 'DATETIME' + this.now_in_unix
+        } else if (this.signatureType == 'address-register') {
             this.message = 'PLAYER' + this.playerId + 'ADDRESS' + this.address
         }
         return this.message
@@ -99,7 +101,15 @@ export class ProxySignature {
                 "pubkey": this.getHexPubKey(),
                 "signature": this.getHexSignature()
             }
-        } else {
+        } else if (this.signatureType == 'guild-login') {
+            this.output = {
+                "guild_id": this.guildId,
+                "address": this.address,
+                "now_in_unix": this.now_in_unix,
+                "pubkey": this.getHexPubKey(),
+                "signature": this.getHexSignature()
+            }
+        } else if (this.signatureType == 'address-register') {
             // PLAYER%sADDRESS%s
             this.output = {
                 "player_id": this.playerId,
@@ -146,6 +156,30 @@ program.command('guild-join')
 
 
     });
+
+
+// Help options
+program.command('guild-login')
+    .description('Guild Login Message')
+    .argument('<guild_id>', 'The Guild ID')
+    .argument('<now_in_unix>', 'A Recent Unix Timestamp')
+    .argument('<mnemonic>', 'The key')
+    .action((guild_id, now_in_unix, mnemonic) => {
+        //console.log('Signing a Login message')
+        //console.log(guild_id + now_in_unix)
+
+        //console.log('💎💎Initializing wallet...')
+        proxySignature.mnemonic = mnemonic;
+
+        //console.log('💎💎Setting Message Type...')
+        proxySignature.signatureType = 'guild-login'
+        proxySignature.guildId = guild_id
+        proxySignature.now_in_unix = now_in_unix
+
+        //console.log('💎💎Setup Complete')
+
+    });
+
 
 
 // Help options
