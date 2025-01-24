@@ -64,7 +64,7 @@ export class ProxySignature {
     getMessage(){
         if (this.signatureType == 'guild-join') {
             this.message = 'GUILD' + this.guildId + 'ADDRESS' + this.address + 'NONCE' + this.nonce
-        else if (this.signatureType == 'guild-login') {
+        } else if (this.signatureType == 'guild-login') {
             this.message = 'LOGIN_GUILD' + this.guildId + 'ADDRESS' + this.address + 'DATETIME' + this.now_in_unix
         } else if (this.signatureType == 'address-register') {
             this.message = 'PLAYER' + this.playerId + 'ADDRESS' + this.address
